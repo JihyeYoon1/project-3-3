@@ -3,8 +3,8 @@
 
 <mapper namespace="com.vet.clinic.dao.StaffDAO">
 
-	<select id="staffList" resultType="">
-	
+	<select id="staffList" resultType="StaffDTO">
+	SELECT * from staff;
 	
 	</select>
 </mapper>
