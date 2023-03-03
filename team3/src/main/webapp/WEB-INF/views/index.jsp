@@ -59,9 +59,10 @@
 
 			</div>
 			<!-- End of Main Content -->
-			
-			<%@ include file="../bar/footer.jsp" %>
-			<%@ include file="../bar/logoutModal.jsp" %>
+			</div>
+			</div>
+			<%@ include file="./bar/footer.jsp" %>
+			<%@ include file="./bar/logoutModal.jsp" %>
 
 
 
