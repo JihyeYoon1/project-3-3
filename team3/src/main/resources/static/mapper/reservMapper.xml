@@ -6,5 +6,7 @@
 	<select id="list" resultType="ReservDTO">
 	SELECT * from clientview;
 	
+	
 	</select>
 </mapper>
+<!--  -->

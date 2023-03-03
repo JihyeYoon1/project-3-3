@@ -102,7 +102,7 @@
 											style="width: auto;">예약: 2명</th>
 									</tr>
 
-
+<!--  -->
 <%-- 									<c:forEach items="${clientview }" var="l"> --%>
 									<tr class="left" style="border-bottom: 1px solid gray;">
 										<td style="font-size: 14px;"><span><a href="#"

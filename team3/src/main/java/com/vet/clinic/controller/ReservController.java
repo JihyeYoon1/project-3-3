@@ -11,7 +11,7 @@ import com.vet.clinic.dto.ReservDTO;
 import com.vet.clinic.service.ReservService;
 
 @Controller
-public class ReservController {
+public class ReservController {//
 
 	@Autowired
 	private ReservService reservService;
