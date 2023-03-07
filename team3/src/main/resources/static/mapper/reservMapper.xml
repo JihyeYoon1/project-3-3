@@ -3,8 +3,8 @@
 
 <mapper namespace="com.vet.clinic.dao.ReservDAO">
 
-	<select id="list" resultType="ReservDTO">
-	SELECT * from clientview;
+	<select id="boardlist" resultType="ReservDTO">
+	SELECT pet_name from pet;
 	
 	
 	</select>

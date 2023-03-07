@@ -32,7 +32,7 @@
 }
 #menu2 {
 	background-color: rgb(135, 206, 235, 0.2);
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 #width100{
 	width: 100%;
@@ -47,6 +47,9 @@
 }
 a {
   text-decoration: none;
+}
+.350px{
+	width: 50px;
 }
 
 </style>

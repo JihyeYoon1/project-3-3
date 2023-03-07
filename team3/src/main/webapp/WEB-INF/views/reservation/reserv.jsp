@@ -50,96 +50,113 @@
 				<%@ include file="../bar/topBar.jsp"%>
 				<!-- Begin Page Content -->
 				<div class="container-fluid">
-					<!-- Page Heading -->
-					<!-- 				<h1 class="h3 mb-4 text-gray-800">예약/접수</h1> -->
 
-					<!-- 메뉴1 -->
-					<ul class="nav" id="menu1">
-						<li class="nav-item"><a class="nav-link" aria-current="page"
-							href="#" style="color:gray;">예약/접수</a></li>
-						<li class="nav-item"><a class="nav-link" href="#" style="color:gray;">캘린더</a></li>
-						<li class="nav-item1"><a class="nav-link" href="#"></a></li>
-						<li class="nav-item">
-							<button type="button" class="btn btn-success">신규등록</button>
-						</li>
-					</ul>
-					<!-- 메뉴2 -->
-					<ul class="nav" id="menu2" >
-						<li class="nav-item"><a class="nav-link" aria-current="page" href="#"><span style="color: gray;">예약</span> <span><b>3&nbsp;&nbsp;</b></span></a></li>
-						<li class="nav-item"><a class="nav-link" href="#"><span style="color: gray;">접수대기</span> <span><b>19&nbsp;&nbsp;</b></span></a>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="#"><span style="color: gray;">진료중</span> <span><b>5&nbsp;&nbsp;</b></span></a>
-						</li>
-					</ul>
+					<%@ include file="../reservation/reserv_bar.jsp"%>
 
 
 					<!-- 검색창 / 예약창 / 접수창 -->
 					<div class="container-2 ">
 						<!-- 검색 -->
-						<div class="card border-primary mb-3 left mr-2" style="max-width: 23rem;">
+						<div class="card border-secondary mb-3 left mr-2"
+							style="max-width: 22rem;">
+							<!--메뉴1 -->
 							<div class="card-header">고객조회</div>
-							<div class="card-body text-primary">
-							<!-- 검색기능 -->
-							<nav class="navbar navbar-light bg-light">
-							  <form class="form-inline">
-							    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-							    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-							  </form>
-							</nav>
+							<div
+								style="margin-top: 0; margin-left: 13px; margin-right: 13px; margin-bottom: 20px;">
+								  <div style="height:520px; overflow-y:auto"> 
+								<!-- 검색기능 -->
+								<nav class="navbar navbar-light bg-light">
+									<form class="form-inline">
+										<input class="form-control mr-sm-2" style="width: 230px;"
+											type="search" placeholder="이름 혹은 전화번호" aria-label="검색">
+										<button class="btn btn-outline-success my-2 my-sm-0"
+											type="submit">검색</button>
+									</form>
+								</nav>
+								  </div>
 							</div>
 						</div>
 						<!-- 예약 -->
-						<div class="card border-secondary mb-3 left mr-2" style="width:auto;">
+						<div class="card border-secondary mb-3 left mr-2"
+							style="max-width: 22rem;">
 							<!--메뉴1 -->
 							<div class="card-header">예약</div>
-							<!-- 겉 4방 마진  -->
-<!-- 							<div class="card-body"> -->
-							<div style="margin:15px; margin-top:0;">
-								<table class="table table-borderless"
-									style="color: gray; background-color: white;">
-									<tr>
-										<th class="t-right" style="border-bottom: 1px solid gray;"
-											style="width: auto;">예약: 2명</th>
-									</tr>
-
-<!--  -->
-<%-- 									<c:forEach items="${clientview }" var="l"> --%>
-									<tr class="left" style="border-bottom: 1px solid gray;">
-										<td style="font-size: 14px;"><span><a href="#"
-												style="text-decoration: none;"><b
-													style="font-size: 25px; color: black">까미</b></a>&nbsp;&nbsp;&nbsp;윤지혜
-												수정</span> <br> <span>2019.06.03 | 4살 | 여</span><br> <span>결석,
-												설사</span>
-										<td style="padding-left: 50px; text-align: right;"><span>오전
-												11:30</span><br>
-										<br> <span>
-												<button type="button">예약취소</button>
-												<button type="button">접수</button>
-										</span></td>
-										</td>
-									</tr>
-
-
-
-<%-- 								</c:forEach> --%>
+							<div
+								style="margin-top: 0; margin-left: 13px; margin-right: 13px; margin-bottom: 20px;">
+								  <div style="height:520px; overflow-y:auto"> 
+								<table class="table table-borderless" style="color: gray; background-color: white;">
+								  <tr>
+								    <th class="t-right" style="border-bottom: 1px solid gray; width: auto;">예약: 2명</th>
+								  </tr>
+								
+								    <c:forEach items="${boardlist}" var="l">
+								      <tr class="left" style="border-bottom: 1px solid gray; padding-bottom: 5px;">
+								        <td style="font-size: 14px; width: 180px;">
+								          <div style="inline-block">
+								            <a href="#" style="text-decoration: none;"><b style="font-size: 25px; color: black">${l.pet_name}</b></a>&nbsp;&nbsp;&nbsp;윤지혜 수정
+								          </div>
+								          <br>
+								          <span>2019.06.03 | 4살 | 여</span>
+								          <br>
+								          <span>결석, 설사</span>
+								        </td>
+								        <td style="text-align: right;">
+								          <span>오전 11:30</span>
+								          <br>
+								          <br>
+								          <span>
+								            <button type="button">예약취소</button>
+								            <button type="button">접수</button>
+								          </span>
+								        </td>
+								      </tr>
+								    </c:forEach>
 								</table>
-
-
+								  </div>
 							</div>
-<!-- 							</div> -->
 						</div>
 						<!-- 접수 -->
-						<div class="card border-secondary mb-3 left" style="max-width: 23rem;">
+						<div class="card border-secondary mb-3 left mr-2"
+							style="max-width: 22rem;">
+							<!--메뉴1 -->
 							<div class="card-header">접수</div>
-							<div class="card-body text-secondary">
-								<h5 class="card-title">Secondary card title</h5>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-						</div>
+							<div
+								style="margin-top: 0; margin-left: 13px; margin-right: 13px; margin-bottom: 20px;">
+								  <div style="height:520px; overflow-y:auto"> 
+								<table class="table table-borderless" style="color: gray; background-color: white;">
+								  <tr>
+								    <th class="t-right" style="border-bottom: 1px solid gray; width: auto;">대기중: 9명</th>
+								  </tr>
+								
+								    <c:forEach items="${boardlist}" var="l">
+								      <tr class="left" style="border-bottom: 1px solid gray; padding-bottom: 5px;">
+								        <td style="font-size: 14px; width: 180px;">
+								          <div style="inline-block">
+								            <a href="#" style="text-decoration: none;"><b style="font-size: 25px; color: black">${l.pet_name}</b></a>&nbsp;&nbsp;&nbsp;윤지혜 수정
+								          </div>
+								          <br>
+								          <span>2019.06.03 | 4살 | 여</span>
+								          <br>
+								          <span>결석, 설사</span>
+								        </td>
+								        <td style="text-align: right;">
+								          <span>오전 11:30</span>
+								          <br>
+								          <br>
+								          <span>
+								            <button type="button">예약취소</button>
+								            <button type="button">접수</button>
+								          </span>
+								        </td>
+								      </tr>
+								    </c:forEach>
+								</table>
+								  </div>
+							</div>
 						</div>
 					</div>
-					
-					
+
+
 					<!-- /.container-fluid -->
 
 				</div>
